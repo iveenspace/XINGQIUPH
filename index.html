@@ -280,7 +280,7 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 450px; height: 150px;">
+                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 450px; height: 125px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
@@ -621,9 +621,9 @@
                         
                         // Try to draw the XINGQIU group photo if available
                         const XINGQIUGROUPPhotoElement = document.getElementById('XINGQIUGROUPPhoto');
-                        if (XINGQIUGROUPPhotoElement && XINGQIUGROUPPhotoElement.complete && XINGQIUGROUPPhotoElement.naturalHeight !== 0) {
+                        if (PhotoElement && PhotoElement.complete && PhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = XINGQIUGROUPPhotoElement.naturalWidth / XINGQIUGROUPPhotoElement.naturalHeight;
+                            const imgAspect = \PhotoElement.naturalWidth / PhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -644,7 +644,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(XINGQIUGROUPPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(PhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
