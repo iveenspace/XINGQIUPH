@@ -280,13 +280,13 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 450px; height: 125px;">
+                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 405px; height: 125px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
                     
                     <!-- XINGQIU Photo -->
-                    <div class="group-photo-container mb-12" style="width: 405px; height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
+                    <div class="group-photo-container mb-12" style="width: 405px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
                         <img id="TXINGQIU-GROUP" src="./XINGQIU-GROUP.png" alt="XINGQIU-GROUP" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
@@ -583,7 +583,7 @@
                     statusMessage.textContent = "Generating photostrip...";
                     
                     const stripWidth = 450;
-                    const stripHeight = 1350;
+                    const stripHeight = 1400;
                     
                     photoStripCanvas.width = stripWidth;
                     photoStripCanvas.height = stripHeight;
@@ -609,8 +609,8 @@
                     }
                     
                     // Add the XINGQIU group photo area
-                    const membersAreaY = 200;
-                    const membersAreaHeight = 300;
+                    const membersAreaY = 220;
+                    const membersAreaHeight = 250;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -621,9 +621,9 @@
                         
                         // Try to draw the XINGQIU group photo if available
                         const XINGQIUGROUPPhotoElement = document.getElementById('XINGQIUGROUPPhoto');
-                        if (PhotoElement && PhotoElement.complete && PhotoElement.naturalHeight !== 0) {
+                        if (XINGQIUGROUPPhotoElement && XINGQIUGROUPPhotoElement.complete && XINGQIUGROUPPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = \PhotoElement.naturalWidth / PhotoElement.naturalHeight;
+                            const imgAspect = \XINGQIUGROUPPhotoElement.naturalWidth / XINGQIUGROUPPhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -644,7 +644,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(PhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(XINGQIUGROUPPhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
