@@ -280,7 +280,7 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 450px; height: 150px;">
+                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 450px; height: 125px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
@@ -583,7 +583,7 @@
                     statusMessage.textContent = "Generating photostrip...";
                     
                     const stripWidth = 450;
-                    const stripHeight = 1300;
+                    const stripHeight = 1400;
                     
                     photoStripCanvas.width = stripWidth;
                     photoStripCanvas.height = stripHeight;
@@ -600,7 +600,7 @@
                     // Add XINGQIU  logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
-                        const logoWidth = 300;
+                        const logoWidth = 250;
                         const logoHeight = (logoElement.naturalHeight / logoElement.naturalWidth) * logoWidth;
                         const logoX = (stripWidth - logoWidth) / 2;
                         const logoY = 20;
@@ -652,7 +652,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 400;
+                    const photoStartY = 450;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
