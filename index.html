@@ -300,8 +300,8 @@
                 </div>
                 
                 <div class="mt-5 text-center">
-                    <button id="downloadBtn" class="btn btn-primary px-6 py-3" disabled>
-                        Download Photostrip
+                    <button id="Btn" class="btn btn-primary px-6 py-3" disabled>
+                         Photostrip
                     </button>
                 </div>
             </div>
@@ -320,7 +320,7 @@
             const photoStripContainer = document.getElementById('photoStripContainer');
             const startBtn = document.getElementById('startBtn');
             const resetBtn = document.getElementById('resetBtn');
-            const downloadBtn = document.getElementById('downloadBtn');
+            const Btn = document.getElementById('Btn');
             const countdown = document.getElementById('countdown');
             const flash = document.getElementById('flash');
             const cameraError = document.getElementById('cameraError');
@@ -548,9 +548,9 @@
                     }
                     
                     resetBtn.disabled = false;
-                    downloadBtn.disabled = false;
+                    Btn.disabled = false;
                     switchCameraBtn.disabled = false;
-                    statusMessage.textContent = "All photos taken! You can download your photostrip.";
+                    statusMessage.textContent = "All photos taken! You can  your photostrip.";
                 } catch (err) {
                     console.error('Photobooth error:', err);
                     statusMessage.textContent = "An error occurred. Please try again.";
@@ -568,14 +568,14 @@
                 
                 startBtn.disabled = false;
                 resetBtn.disabled = true;
-                downloadBtn.disabled = true;
+                Btn.disabled = true;
                 statusMessage.textContent = "Reset complete. Ready to take new photos.";
             }
             
-            // Download photostrip
-            async function downloadPhotostrip() {
+            //  photostrip
+            async function Photostrip() {
                 if (capturedPhotos.length === 0) {
-                    statusMessage.textContent = "No photos to download.";
+                    statusMessage.textContent = "No photos to .";
                     return;
                 }
                 
@@ -717,15 +717,15 @@
                     await processPhotos();
                     
                     // Footer section - matching the exact layout with gold colors
-                    const footerStartY = stripHeight - 70;
+                    const footerStartY = stripHeight - 30;
                     
                     ctx.fillStyle = '#f7dc6f';
-                    ctx.font = 'bold 12px "Montserrat", sans-serif';
+                    ctx.font = 'bold 15px "Montserrat", sans-serif';
                     ctx.fillText('XINGQIU PHILIPPINES', stripWidth / 2, footerStartY + 50);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'THE_NEXTPRINCE_photostrip.jpg';
+                    link.download = 'XINGQIU_PHILIPPINES_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
