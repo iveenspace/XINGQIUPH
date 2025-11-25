@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XINGQIU Photostrip</title>
+    <title>THE NEXT PRINCE Photostrip</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
@@ -223,7 +223,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-gold-800">XINGQIU</h1>
+            <h1 class="text-6xl font-bold text-gold-800">THE NEXT PRINCE</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -280,14 +280,14 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="XINGQIUPHILIPPINES-LOGO" class="mx-auto" style="max-width: 405px; height: 125px;">
+                        <img src="./logo.png" alt="THE NEXT PRINCE Logo" class="mx-auto" style="max-width: 450px; height: 150px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
                     
-                    <!-- XINGQIU Photo -->
-                    <div class="group-photo-container mb-12" style="width: 405px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
-                        <img id="TXINGQIU-GROUP" src="./XINGQIU-GROUP.png" alt="XINGQIU-GROUP" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <!-- THENEXTPRINCE Photo -->
+                    <div class="group-photo-container mb-12" style="width: 405px; height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
+                        <img id="THENEXTPRINCEGroupPhoto" src="./group.png" alt="THENEXTPRINCEGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
                     <div id="photoStripContainer" class="flex flex-col gap-4 mb-12">
@@ -295,7 +295,9 @@
                     </div>
 
                     <div class="photostrip-footer">
-                        <p class="text-[8px] text-gold-700">XINGQIU PHILIPPINES</p>
+                        <p class="text-[18px] text-gold-700">MEMORIES FROM THE EVENT</p>
+                        <p class="text-[10px] text-gold-700 mt-1">© THE NEXT PRINCE </p>
+                        <p class="text-[8px] text-gold-700">KONEKONUNU</p>
                     </div>
                 </div>
                 
@@ -583,7 +585,7 @@
                     statusMessage.textContent = "Generating photostrip...";
                     
                     const stripWidth = 450;
-                    const stripHeight = 1400;
+                    const stripHeight = 1300;
                     
                     photoStripCanvas.width = stripWidth;
                     photoStripCanvas.height = stripHeight;
@@ -597,7 +599,7 @@
                     // Header section - add logo first
                     ctx.textAlign = 'center';
                     
-                    // Add XINGQIU logo at the top
+                    // Add THE NEXT PRINCE logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
                         const logoWidth = 300;
@@ -608,9 +610,9 @@
                         ctx.drawImage(logoElement, logoX, logoY, logoWidth, logoHeight);
                     }
                     
-                    // Add the XINGQIU group photo area
-                    const membersAreaY = 220;
-                    const membersAreaHeight = 250;
+                    // Add the THE NEXT PRINCE group photo area
+                    const membersAreaY = 200;
+                    const membersAreaHeight = 200;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -619,11 +621,11 @@
                         ctx.fillRect(0, membersAreaY, stripWidth, membersAreaHeight);
                         ctx.globalAlpha = 1;
                         
-                        // Try to draw the XINGQIU group photo if available
-                        const XINGQIUGROUPPhotoElement = document.getElementById('XINGQIUGROUPPhoto');
-                        if (XINGQIUGROUPPhotoElement && XINGQIUGROUPPhotoElement.complete && XINGQIUGROUPPhotoElement.naturalHeight !== 0) {
+                        // Try to draw the THE NEXT PRINCE group photo if available
+                        const THENEXTPRINCEPhotoElement = document.getElementById('THENEXTPRINCEGroupPhoto');
+                        if (THENEXTPRINCEPhotoElement && THENEXTPRINCEPhotoElement.complete && THENEXTPRINCEPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = \XINGQIUGROUPPhotoElement.naturalWidth / XINGQIUGROUPPhotoElement.naturalHeight;
+                            const imgAspect = THENEXTPRINCEPhotoElement.naturalWidth / THENEXTPRINCEPhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -644,7 +646,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(XINGQIUGROUPPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(THENEXTPRINCEPhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -652,7 +654,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 400;
+                    const photoStartY = 460;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -719,13 +721,21 @@
                     // Footer section - matching the exact layout with gold colors
                     const footerStartY = stripHeight - 70;
                     
+                    ctx.fillStyle = '#d4af37';
+                    ctx.font = 'bold 16px "Montserrat", sans-serif';
+                    ctx.fillText('MEMORIES FROM THE EVENT', stripWidth / 2, footerStartY + 10);
+                    
+                    ctx.fillStyle = '#f4d03f';
+                    ctx.font = 'bold 13px "Montserrat", sans-serif';
+                    ctx.fillText('THE NEXT PRINCE', stripWidth / 2, footerStartY + 30);
+                    
                     ctx.fillStyle = '#f7dc6f';
                     ctx.font = 'bold 12px "Montserrat", sans-serif';
-                    ctx.fillText('XINGQIU PHILIPPINES', stripWidth / 2, footerStartY + 50);
+                    ctx.fillText('KONEKONUNU', stripWidth / 2, footerStartY + 50);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'XINGQIU_PHILIPPINES_photostrip.jpg';
+                    link.download = 'THE_NEXTPRINCE_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
