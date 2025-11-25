@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE NEXT PRINCE Photostrip</title>
+    <title>HAPPY BIRTHDAY ELIOT!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
@@ -223,7 +223,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-gold-800">THE NEXT PRINCE</h1>
+            <h1 class="text-6xl font-bold text-gold-800">HAPPY BIRTHDAY ELIOT!</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -280,14 +280,14 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./logo.png" alt="THE NEXT PRINCE Logo" class="mx-auto" style="max-width: 450px; height: 150px;">
+                        <img src="./XINGQIUPHILIPPINES-LOGO.png" alt="HAPPY BIRTHDAY ELIOT! Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
                     
                     <!-- THENEXTPRINCE Photo -->
-                    <div class="group-photo-container mb-12" style="width: 405px; height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
-                        <img id="THENEXTPRINCEGroupPhoto" src="./group.png" alt="THENEXTPRINCEGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="group-photo-container mb-12" style="width: 200px; height: 155px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
+                        <img id="XINGXINGGroupPhoto" src="./XINGXING.png" alt="XINGXINGGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
                     <div id="photoStripContainer" class="flex flex-col gap-4 mb-12">
@@ -295,9 +295,8 @@
                     </div>
 
                     <div class="photostrip-footer">
-                        <p class="text-[18px] text-gold-700">MEMORIES FROM THE EVENT</p>
-                        <p class="text-[10px] text-gold-700 mt-1">© THE NEXT PRINCE </p>
-                        <p class="text-[8px] text-gold-700">KONEKONUNU</p>
+                        <p class="text-[18px] text-gold-700">HAPPY BIRTHDAY ELIOT!</p>
+                        <p class="text-[10px] text-gold-700 mt-1">XINGQIU PHILIPPINES </p>
                     </div>
                 </div>
                 
@@ -599,7 +598,7 @@
                     // Header section - add logo first
                     ctx.textAlign = 'center';
                     
-                    // Add THE NEXT PRINCE logo at the top
+                    // Add HAPPY BIRTHDAY ELIOT! logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
                         const logoWidth = 300;
@@ -610,7 +609,7 @@
                         ctx.drawImage(logoElement, logoX, logoY, logoWidth, logoHeight);
                     }
                     
-                    // Add the THE NEXT PRINCE group photo area
+                    // Add the HAPPY BIRTHDAY ELIOT! group photo area
                     const membersAreaY = 200;
                     const membersAreaHeight = 200;
                     
@@ -621,7 +620,7 @@
                         ctx.fillRect(0, membersAreaY, stripWidth, membersAreaHeight);
                         ctx.globalAlpha = 1;
                         
-                        // Try to draw the THE NEXT PRINCE group photo if available
+                        // Try to draw the HAPPY BIRTHDAY ELIOT! group photo if available
                         const THENEXTPRINCEPhotoElement = document.getElementById('THENEXTPRINCEGroupPhoto');
                         if (THENEXTPRINCEPhotoElement && THENEXTPRINCEPhotoElement.complete && THENEXTPRINCEPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
@@ -723,19 +722,15 @@
                     
                     ctx.fillStyle = '#d4af37';
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
-                    ctx.fillText('MEMORIES FROM THE EVENT', stripWidth / 2, footerStartY + 10);
+                    ctx.fillText('HAPPY BIRTHDAY ELIOT!', stripWidth / 2, footerStartY + 10);
                     
                     ctx.fillStyle = '#f4d03f';
                     ctx.font = 'bold 13px "Montserrat", sans-serif';
-                    ctx.fillText('THE NEXT PRINCE', stripWidth / 2, footerStartY + 30);
-                    
-                    ctx.fillStyle = '#f7dc6f';
-                    ctx.font = 'bold 12px "Montserrat", sans-serif';
-                    ctx.fillText('KONEKONUNU', stripWidth / 2, footerStartY + 50);
+                    ctx.fillText('XINGQIU PHILIPPINES', stripWidth / 2, footerStartY + 30);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'THE_NEXTPRINCE_photostrip.jpg';
+                    link.download = 'HAPPY_BIRTHDAY_ELIOT_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
