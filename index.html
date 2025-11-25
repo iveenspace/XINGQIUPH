@@ -610,8 +610,8 @@
                     }
                     
                     // Add the HAPPY BIRTHDAY ELIOT! group photo area
-                    const membersAreaY = 200;
-                    const membersAreaHeight = 155;
+                    const membersAreaY = 400;
+                    const membersAreaHeight = 300;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -620,8 +620,8 @@
                         ctx.fillRect(0, membersAreaY, stripWidth, membersAreaHeight);
                         ctx.globalAlpha = 1;
                         
-                        // Try to draw the HAPPY BIRTHDAY ELIOT! group photo if available
-                        const XINGXINGPhotoElement = document.getElementById('TXINGXINGGroupPhoto');
+                        // Try to draw the XINGXING group photo if available
+                        const XINGXINGPhotoElement = document.getElementById('XINGXINGGroupPhoto');
                         if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
                             const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 460;
+                    const photoStartY = 450;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
