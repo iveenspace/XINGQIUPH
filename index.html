@@ -204,7 +204,7 @@
             transform: scale(1);
         }
         
-        .photostrip-container .THENEXTPRINCE-text {
+        .photostrip-container .XINGXING-text {
             color: #d4af37;
             text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
         }
@@ -285,8 +285,8 @@
                     <div class="photostrip-header text-center mb-5">
                     </div>
                     
-                    <!-- THENEXTPRINCE Photo -->
-                    <div class="group-photo-container mb-12" style="width: 400px; height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
+                    <!-- XINGXING Photo -->
+                    <div class="group-photo-container mb-12" style="width: 400px; height: 155px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
                         <img id="XINGXINGGroupPhoto" src="./XINGXING.png" alt="XINGXINGGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
@@ -611,7 +611,7 @@
                     
                     // Add the HAPPY BIRTHDAY ELIOT! group photo area
                     const membersAreaY = 200;
-                    const membersAreaHeight = 200;
+                    const membersAreaHeight = 155;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -621,10 +621,10 @@
                         ctx.globalAlpha = 1;
                         
                         // Try to draw the HAPPY BIRTHDAY ELIOT! group photo if available
-                        const THENEXTPRINCEPhotoElement = document.getElementById('THENEXTPRINCEGroupPhoto');
-                        if (THENEXTPRINCEPhotoElement && THENEXTPRINCEPhotoElement.complete && THENEXTPRINCEPhotoElement.naturalHeight !== 0) {
+                        const XINGXINGPhotoElement = document.getElementById('TXINGXINGGroupPhoto');
+                        if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = THENEXTPRINCEPhotoElement.naturalWidth / THENEXTPRINCEPhotoElement.naturalHeight;
+                            const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -645,7 +645,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(THENEXTPRINCEPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(XINGXINGPhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 460;
+                    const photoStartY = 400;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
